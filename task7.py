@@ -4,3 +4,16 @@
 # Пример: ввод N = 6
 # [20, -90, 15, -34, 10, 0]
 # Вывод: [20, 15, 10, -90, -34, 0]
+from random import randint
+
+n=int(input())
+lst=[randint(-100, 100) for i in range(n)]
+
+positive=[]
+negative=[]
+for num in lst:
+    if num>0:
+        positive.append(num)
+    else:
+        negative.append(num)
+print(positive+negative)
